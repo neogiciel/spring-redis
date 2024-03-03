@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Spring Search</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body >
+  
+<div class="header" align="right"><img src="/img/spring.jpg" height="60px"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="/">Application <span>Spring Boot</span></a></li>
+      <li><a href="http://www.neogiciel.com" target="_blank">Company</a></li>
+    </ul>
+  </div>
+  <div id='center' class="main center">
+    <div class="p">
+     <div class="txt">Liste des services</div>
+      <center>
+
+    <br>
+    <table class=tabborder width="60%">
+    <tr th:if="${liste.empty}">
+        <td colspan="3"> Aucun d element </td>
+    </tr>
+    <tr class=tabtitre>
+        <td>ID</td>
+        <td>label</td>
+        <td></td>
+    </tr>    
+    <tr th:each="element : ${liste}">
+        <td class="tabcell"><span th:text="${element.id}"> id </span></td>
+        <td class="tabcell"><span th:text="${element.label}"> label </span><br></td>
+        <td class="tabcell" align="center"><a th:href="@{supprimerservice(id=${element.id})}"> <img src="/img/tab-delete.png" width="20px"></a></td>
+    </tr>
+    </table>
+
+  </center>
+    </div>
+</div>
+</body>
+</html>
+

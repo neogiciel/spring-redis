@@ -1,0 +1,273 @@
+/*======= general =======*/
+html, body {
+    overflow-x: hidden;
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #0f0f0f;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #f17305 0%, #e3e30c 100%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/*=======================================*/
+.main {
+    margin: 40px auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.p {
+    margin: 20px auto;
+    margin-top: 20px;
+}
+
+.table{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+.table div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.txt {
+	font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size:2em;
+	text-decoration: none;
+	color: #666666;
+}
+.txtb {
+	font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size:2em;
+	text-decoration: none;
+	color: #666666;
+	font-weight:bold
+}
+.titre{
+	font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: #222222;
+}
+.titre-color{
+	font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: #FF6600;
+}
+.titre-bold {
+	font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: #666666;
+}
+
+.lien {font-weight:480;
+	font-family:Arial,sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: #FF6600;}
+a:hover { color: #FFFFFF; text-decoration: none }
+a:link { text-decoration: none }
+a:visited { text-decoration: none }
+
+/*======= tableau =======*/
+.tabborder {
+	border:1px solid #666666;
+	box-shadow:1px 1px 3px #666666;
+}
+.tabtitre {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:14px;
+	background-color: #000000;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabtitre-small {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #492D1F;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabcell {
+	font-weight:480;
+	font-family:'Futura Lt',Arial,sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+}
+
+.tabcell-upper {
+	font-weight:400;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:16px;
+	background-color: #D6D6D6;
+	color: #202020;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+
+.tabcell -bouton{
+	background-color: #D6D6D6;;
+	align-content: center;
+}
+
+.tabcell-big {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:18px;
+	background-color: #D6D6D6;
+	color: #222222;
+}
+
+.tablien {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+	font-weight:bold
+}
+
+.tabnav {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #ADC642;
+	color: #FFFFFF;
+	font-weight: bold
+}
+.tabnav a:hover { color: #FFFFFF; text-decoration: none }
+.tabnav a:link { text-decoration: none }
+.tabnav a:visited { text-decoration: none }
+

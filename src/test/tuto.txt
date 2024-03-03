@@ -1,0 +1,32 @@
+#docker build
+docker build -t neogicel/spring-rabbitmq .
+docker tag neogicel/spring-rabbitmq neogicel/spring-rabbitmq:2.0
+docker push neogicel/spring-rabbitmq:2.0
+docker run -dit --name spring-rabbit -p 8086:80 neogicel/spring-rabbitmq
+
+#build
+docker build --tag "neogicel/spring-rabbit:1.0" .
+#run
+docker run -p 8089:8089 neogicel/spring-rabbit:1.0
+#push
+docker push neogicel/gw-springboot-keycloak:1.0
+
+#commande dans un pod
+kubectl logs spring-rabbitmq-k8s-9477f85cf-n4t6j    
+kubectl exec -it spring-rabbitmq-k8s-9477f85cf-n4t6j  -- sh
+
+
+
+
+dans pod faire echo "test" > /usr/share/nginx/html/index.html
+
+#concourse
+D:\concourse\fly.exe --target=tutorial login --concourse-url=http://127.0.0.1:9000 --username=test --password=test
+D:\concourse\fly.exe --target=tutorial sync
+D:\concourse\fly.exe -t tutorial set-pipeline -p spring-rabbit -c ci/kube.yaml
+
+#git 
+git add .
+git commit -m "version 1"
+git push -u origin main  
+
