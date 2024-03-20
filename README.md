@@ -18,7 +18,7 @@ Ajout des dépendences<br>
 redis.host=localhost
 redis.port=6379
 </p>
-<h2>Fichier de Configuration d'une base Redis/h2><br>
+<h2>Fichier de Configuration d'une base Redis</h2><br>
 @EnableCaching
 public class RedisConfig {
  
@@ -36,11 +36,10 @@ public class RedisConfig {
 }
 <h2>RestController</h2><br>
 Vous trouverez ci-dessous un exemple de controller REST permettant d'effectuer la gestion du cache
-L'annotation  @Cacheable(value = "nomDuCache", key = "NomCle") permet de sauvegarder automatiquement les données dans notre base Redis
-L'annotation  @CacheEvict(value = "myCache", allEntries = true) permet d'invalide la totalité du cache
-L'annotation  @CacheEvict(value = "myCache", key = "NomCle") permet d'invalide une clé en particulier
+<li>L'annotation  @Cacheable(value = "nomDuCache", key = "NomCle") permet de sauvegarder automatiquement les données dans notre base Redis</li><br>
+<li>L'annotation  @CacheEvict(value = "myCache", allEntries = true) permet d'invalide la totalité du cache</li><br>
+<li>L'annotation  @CacheEvict(value = "myCache", key = "NomCle") permet d'invalide une clé en particulier</li><br>
 Il est à noter que la réponse renvoyer par nos différents appels REST doit être absolument sérialisables en base redis, d'ou le fait de renvoyer une String sous forme de JSon
-
 
 <p>
 
