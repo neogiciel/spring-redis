@@ -1,5 +1,5 @@
 <h1>Application Spring Boot Redis MySQL</h1>
-<img src="[https://upload.wikimedia.org/wikipedia/fr/thumb/6/6b/Redis_Logo.svg/701px-Redis_Logo.svg.png?20190421180155](https://upload.wikimedia.org/wikipedia/commons/f/f4/Elasticsearch_logo.svg)" height=120px>
+<img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/6b/Redis_Logo.svg/701px-Redis_Logo.svg.png?20190421180155" height=120px>
 <p>
 Mise en place d'un cache distribué Redis avec MysQL
 </p>
