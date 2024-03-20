@@ -1,4 +1,4 @@
-<h1>Application Quarkus Redis MySQL</h1>
+<h1>Application Spring Boot Redis MySQL</h1>
 <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/6b/Redis_Logo.svg/701px-Redis_Logo.svg.png?20190421180155" height=160px>
 <p>
 Mise en place d'un cache distribué Redis avec MysQL
@@ -108,6 +108,6 @@ public class ApiController {
 <p>
 Clear: <b>mvn clean</b><br>
 Mise à jour des dependences: <b>mvn dependency:resolve</b><br>
-Compilation et Lancement: <b>mvn quarkus:dev</b>
+Compilation et Lancement: <b>mvn spring-boot:run</b>
 Url du service: http://localhost:8080<br>  
 </p>
